@@ -2,7 +2,7 @@ package EstruturaDecisaoIf;
 
 import java.util.Scanner;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
 
 /**
  * EstruturaDecisaoIf
