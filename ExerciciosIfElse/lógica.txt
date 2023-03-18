@@ -1,0 +1,13 @@
+4Exe.
+    1. leia o nº de maças;
+    2. se nº de macas<12 então valor maça é 0,30
+    3. senão valor da macas é 0,25
+    4. valoCompra = nº de maças * valor da maça;
+    5. mostrar o valor d compra par o usuário
+
+6EXE.
+    1. informe a altura
+    2. informe o sexo;
+    3. se sexo==feminino entao  pesoIdeal = 62.1*altura-44.7
+    4. senao então pesoIdeal = 72.7*altura-58
+    5. imprmir pesoIdeal
