@@ -2,8 +2,6 @@ package EstruturaDecisaoIf;
 
 import java.util.Scanner;
 
-
-
 /**
  * EstruturaDecisaoIf
  */
