@@ -2,7 +2,7 @@ package IteracaoWhile;
 
 public class App {
     public static void main(String[] args) {
-      ExerciciosWhile obj1 = new ExerciciosWhile();
-      obj1.exercicio1(); 
+      ExerciciosExtraWhile obj1 = new ExerciciosExtraWhile();
+      obj1.exercicio5Extra(); 
     }
 }
