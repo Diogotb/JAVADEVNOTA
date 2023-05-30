@@ -6,5 +6,15 @@ public class App {
         System.out.println("Area="+figura1.getArea()
         +" Perimetro="+figura1.getPerimetro()+" "
         +figura1.getNomeFigura());
+
+        Retangulo figura2 = new Retangulo(10, 5);
+        System.out.println("Area="+figura2.getArea()
+        +"\nPerimetro="+figura2.getPerimetro()+"\n"
+        +figura2.getNomeFigura());
+
+        Trapezio figura3 = new Trapezio(10, 4, 4, 5, 5);
+        System.out.println("Area="+figura3.getArea()
+        +"\nPerimetro="+figura3.getPerimetro()+"\n"
+        +figura3.getNomeFigura());
     }
 }

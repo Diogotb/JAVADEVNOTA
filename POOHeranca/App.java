@@ -6,7 +6,7 @@ public class App {
     aluno1.setNome("Adriano");
 
     //
-    //Pessoas pessoa1 = new Pessoas();
+    Pessoas pessoa1 = new Pessoas();
 
     }
 }

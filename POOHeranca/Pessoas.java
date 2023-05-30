@@ -7,6 +7,14 @@ public abstract class Pessoas {
     String endereco;
     int idade;
     String sexo;
+    String rg;
+
+    public abstract String getRg() {
+        return rg;
+    }
+    public abstract void setRg(String rg) {
+        this.rg = rg;
+    }
     //gets and sets
     public String getNome() {
         return nome;
