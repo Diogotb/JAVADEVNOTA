@@ -37,9 +37,9 @@ public class App {
                 contPF++;
             }
             else if(acao==2){//buscar a conta já criada da PF
+                int nContaBusca = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da conta buscada:"));
                 for (int i = 0; i < contasPf.length; i++) {
                     //busca pelo nº da conta
-                    int nContaBusca = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da conta buscada:"))
                     if(nContaBusca == contasPf[i].getnConta()){
                         contaAtual = i;
                         JOptionPane.showMessageDialog(null, "Conta Encontrada");
@@ -47,9 +47,15 @@ public class App {
                 }
                 boolean acessar = true;
                 while(acessar){
-                    int acao2 = JOptionPane.showInputDialog("Ação desejada:"
+                    int acao2 = Integer.parseInt(JOptionPane.showInputDialog("Ação desejada:"
                     +"\n 1- verificar saldo"
-                    +"\n 2-Saque")
+                    +"\n 2-Saque"
+                    +"\n ..."));
+                    if(acao2 == 1){
+                        contasPf[contaAtual].getSaldo();
+                    }else if(acao2==2){
+                        contasPf[contaAtual].saque();
+                    }
                 }
             }
 

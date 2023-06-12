@@ -24,8 +24,11 @@ public abstract class Conta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
+    //método vazio
     public void saque() {
-        
+        int saque = 
+        if(saque> saldo)
         saldo -=saque
     }
     
