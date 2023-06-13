@@ -16,33 +16,47 @@ public class App {
         ContaPJ contasPj[] = new ContaPJ[10];
         //criar a aplicação do banco
         boolean aberta = true;
-        int contPF = 0;
-        int contaAtual = 0;
+        int contPf = 0;
+        int contPj = 0;
         while(aberta){
             int acao = Integer.parseInt(JOptionPane.showInputDialog(
                 "Escolha a ção desejada:"
-                +"\n 1-Abrir Conta"
-                +"\n 2-Acessar Conta"
-                +"\n 3-Sair"
+                +"\n 1-Abrir Conta PF"
+                +"\n 2-Abrir Conta PJ"
+                +"\n 3-Acessar Conta PF"
+                +"\n 4-Acessar Conta PJ"
+                +"\n 5-Sair"
             ));
             if(acao ==1){//abrir conta PF
                 //criar a conta
                 //instanciar o objeto
-                contasPf[contPF] = new ContaPF();//objeto criado
+                contasPf[contPf] = new ContaPF();//objeto criado
                 //preencher as informações da conta
-                contasPf[contPF].setNome(JOptionPane.showInputDialog("Informe o Nome:"));
-                contasPf[contPF].setnCpf(JOptionPane.showInputDialog("Informe o CPF:"));
-                contasPf[contPF].setSaldo(0);
-                contasPf[contPF].setnConta(1000+contPF);
-                contPF++;
+                contasPf[contPf].setNome(JOptionPane.showInputDialog("Informe o Nome:"));
+                contasPf[contPf].setnCpf(JOptionPane.showInputDialog("Informe o CPF:"));
+                contasPf[contPf].setSaldo(0);
+                contasPf[contPf].setnConta(1000+contPf);
+                contPf++;
+            }else if(acao ==2){//abrir conta PJ
+                //criar a conta
+                //instanciar o objeto
+                contasPj[contPj] = new ContaPJ();//objeto criado
+                //preencher as injormações da conta
+                contasPj[contPj].setNome(JOptionPane.showInputDialog("Injorme o Nome:"));
+                contasPj[contPj].setnCnpj(JOptionPane.showInputDialog("Injorme o CPj:"));
+                contasPj[contPj].setSaldo(0);
+                contasPj[contPj].setnConta(2000+contPj);
+                contPj++;
             }
             else if(acao==2){//buscar a conta já criada da PF
+                int contaAtual;
                 int nContaBusca = Integer.parseInt(JOptionPane.showInputDialog("Informe o nº da conta buscada:"));
                 for (int i = 0; i < contasPf.length; i++) {
                     //busca pelo nº da conta
                     if(nContaBusca == contasPf[i].getnConta()){
                         contaAtual = i;
                         JOptionPane.showMessageDialog(null, "Conta Encontrada");
+                        break;
                     }
                 }
                 boolean acessar = true;
@@ -50,11 +64,15 @@ public class App {
                     int acao2 = Integer.parseInt(JOptionPane.showInputDialog("Ação desejada:"
                     +"\n 1- verificar saldo"
                     +"\n 2-Saque"
-                    +"\n ..."));
+                    +"\n 3-"));
                     if(acao2 == 1){
                         contasPf[contaAtual].getSaldo();
                     }else if(acao2==2){
                         contasPf[contaAtual].saque();
+                    }else if(acao2==3){
+                        acessar = false;
+                    }else{
+                        //nº invalido
                     }
                 }
             }
@@ -63,3 +81,4 @@ public class App {
         
     }
 }
+//<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />

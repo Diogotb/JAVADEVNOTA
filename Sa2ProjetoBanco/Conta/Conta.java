@@ -27,9 +27,7 @@ public abstract class Conta {
 
     //método vazio
     public void saque() {
-        int saque = 
-        if(saque> saldo)
-        saldo -=saque
+        
     }
     
 }
