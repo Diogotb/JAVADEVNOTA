@@ -20,7 +20,7 @@ public class ExemploHashMap {
         for (String i : capitaisCidades.keySet()) {
             System.out.println(capitaisCidades.get(i));
         }
-        System.out.println(capitaisCidades));
+        System.out.println(capitaisCidades);
 
     }
 }
