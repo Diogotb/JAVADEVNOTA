@@ -24,8 +24,8 @@ public class CalculadoraGUI extends JFrame implements ActionListener {
         panel.setLayout(new GridLayout(5, 4, 10, 10));
 
         textField = new JTextField();
-        textField.setFont(new Font("Arial", Font.PLAIN, 24));
-        textField.setHorizontalAlignment(JTextField.RIGHT);
+        textField.setFont(new Font("Arial", Font.PLAIN, 48));
+        textField.setHorizontalAlignment(JTextField.CENTER);
         textField.setEditable(false);
 
         numberButtons = new JButton[10];
