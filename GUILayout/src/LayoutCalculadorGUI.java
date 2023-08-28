@@ -1,15 +1,25 @@
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class LayoutCalculadorGUI {
     public LayoutCalculadorGUI() {
         //construir o Layout de uma calculadora
         JFrame janelaP = new JFrame("Layout Calculadora");
+        //Mudando o Layout da Frame
+        BorderLayout border = new BorderLayout();
+        janelaP.setLayout(border);
+        JPanel painelV = new JPanel();
         JPanel painelB = new JPanel();//padrão FlowLayout
-        janelaP.getContentPane().add(painelB);
+        janelaP.getContentPane().add(painelB, BorderLayout.CENTER);
+        janelaP.getContentPane().add(painelV, BorderLayout.NORTH);
+        //adicionar o textFild no PainelV
+        JTextField caixa1 = new JTextField(25);
+        painelV.add(caixa1);
         //set Layout do JPanel
         GridLayout grid = new GridLayout(4, 4);
         painelB.setLayout(grid);
