@@ -1,20 +1,33 @@
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.WindowConstants;
+import javax.swing.*;
+import java.awt.*;
+
 
 public class FlowLayoutExemplo {
-    public FlowLayoutExemplo() {
-        JFrame frame = new JFrame("Janela");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        JPanel c = new JPanel();
-        c.add(new JButton("1"));
-        c.add(new JTextField(9));
-        c.add(new JButton("dois"));
-        c.add(new JButton("três"));
-        frame.getContentPane().add(c);
-        frame.pack();
-        frame.setVisible(true);
+    public FlowLayoutExemplo(){
+        JFrame janela1 = new JFrame("Janela Principal");
+        //Layout da Jframe padrao é GridLayout
+        //Alterar para FlowLayout
+        FlowLayout flow = new FlowLayout();
+        janela1.setLayout(flow);
+        //adicionar os Componentes
+        JLabel texto1 = new JLabel("Nº de Botão:");
+        janela1.add(texto1);
+        JTextField caixa1 = new JTextField(25);
+        janela1.add(caixa1);
+        JButton botao1 = new JButton("Enviar");
+        janela1.add(botao1);
+        //action ao botao
+        botao1.addActionListener(e ->{
+            int quant = Integer.parseInt(caixa1.getText());
+            for (int i = 0; i < quant; i++) {
+                janela1.add(new JButton(""+i));
+            }
+            janela1.pack();
+            janela1.setVisible(true);
+        });
+        //set Frame
+        janela1.setDefaultCloseOperation(2);
+        janela1.pack();
+        janela1.setVisible(true);
     }
 }
